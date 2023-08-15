@@ -1,12 +1,10 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name="auto-commit-msg",
-    packages=find_packages(),
-    install_requires=["openai", 'subprocess32; python_version<"3.0"'],
+    py_modules=["main", "commit_msg_generator", "config"],
     entry_points={
-        "console_scripts": [
-            "auto-commit-msg=auto_commit_msg:main",
-        ],
+        "console_scripts": ["auto-commit-msg=main:run"],
     },
+    install_requires=["openai==0.27.8", 'subprocess32; python_version<"3.0"'],
 )

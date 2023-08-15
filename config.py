@@ -2,7 +2,7 @@ import os
 
 # openai
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
-OPENAI_ENGINE = os.environ.get("OPENAI_ENGINE", "gpt-3.5-turbo")
+OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-3.5-turbo")
 CHUNK_SIZE = 5000
 
 # language
@@ -14,3 +14,14 @@ DEFAULT_CONVENTION = (
     r"(\(.*\))?!?:\s.{1,50})"
 )
 COMMIT_CONVENTION = os.environ.get("COMMIT_CONVENTION", DEFAULT_CONVENTION)
+
+# prepare-commit-msg hook script that runs before commit
+PREPARE_COMMIT_MSG = """#!/bin/bash
+commit_msg_file=$1
+commit_msg=$(cat $commit_msg_file)
+
+if [[ $commit_msg == *"'#'"* ]]; then
+    echo $(cat .git/temp_commit_msg) > $commit_msg_file
+    rm .git/temp_commit_msg
+fi
+"""
