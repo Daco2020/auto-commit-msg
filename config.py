@@ -18,10 +18,13 @@ COMMIT_CONVENTION = os.environ.get("COMMIT_CONVENTION", DEFAULT_CONVENTION)
 # prepare-commit-msg hook script that runs before commit
 PREPARE_COMMIT_MSG = """#!/bin/bash
 commit_msg_file=$1
+commit_source=$2
 commit_msg=$(cat $commit_msg_file)
 
-if [[ $commit_msg == *"'#'"* ]]; then
-    echo $(cat .git/temp_commit_msg) > $commit_msg_file
-    rm .git/temp_commit_msg
+if [ "$commit_source" == "message" ]; then
+    if [[ $commit_msg == *"'#'"* ]]; then
+        echo $(cat .git/temp_commit_msg) > $commit_msg_file
+        rm .git/temp_commit_msg
+    fi
 fi
 """
