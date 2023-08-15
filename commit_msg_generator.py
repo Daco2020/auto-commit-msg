@@ -88,7 +88,7 @@ class CommitMessageGenerator:
         """Returns the language to use for the commit message answer."""
         return {
             "en": "Please answer in English.",
-            "ko": "영어로 답변해주세요.",
-            "cn": "请用英语回答。",
-            "jp": "英語でお答えください。",
+            "ko": "한국어로 답변해주세요.",
+            "cn": "请用中文回答。",
+            "jp": "日本語でお答えください。",
         }.get(language, "Please answer in English.")
