@@ -10,7 +10,7 @@ Automatically generate a commit message with just the `git commit` command, with
 
 See [pre-commit](https://github.com/pre-commit/pre-commit) for instructions
 
-Add this to your `.pre-commit-config.yaml:`
+Add this to your `.pre-commit-config.yaml`:
 
 ```yaml
 repos:
