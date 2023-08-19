@@ -9,6 +9,7 @@ from commit_msg_generator import CommitMessageGenerator
 
 
 def run() -> None:
+    """Run the auto-commit-msg script."""
     create_prepare_commit_msg()
 
     diff = get_diff()
