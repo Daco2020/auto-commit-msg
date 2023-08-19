@@ -20,19 +20,21 @@ repos:
 
 ## Required Environment Variables
 
-`OPENAI_API_KEY`
->Please register your own OpenAI API key in the environment variables.
+`OPENAI_API_KEY`  
+Please register your own OpenAI API key in the environment variables.
 
 ## Optional Environment Variables
 
-`OPENAI_MODEL`
->Please specify the OpenAI model you wish to use. The default is "gpt-3.5-turbo".
+`OPENAI_MODEL`  
+Please specify the OpenAI model you wish to use. The default is "gpt-3.5-turbo".
 
-`COMMIT_LANGUAGE`
->Set the desired language for the commit message. By default, it's set to 'en'(English). 'ko'(Korean), 'jp'(Japanese), and 'cn'(Chinese) are also supported.
+`COMMIT_LANGUAGE`  
+Set the desired language for the commit message. By default, it's set to 'en'(English). 'ko'(Korean), 'jp'(Japanese), and 'cn'(Chinese) are also supported.
 
-`COMMIT_CONVENTION`
->Please specify the desired commit message convention. If you do not provide one, the default will be left blank. The example is as below::
+`COMMIT_CONVENTION`  
+Please specify the desired commit message convention. If you do not provide one, the default will be left blank. 
+
+The example is as below:  
 ```sh
 # Example 1:
 COMMIT_CONVENTION="^((revert: \")?(feat|fix|docs|style|refactor|perf|test|ci|build|chore)(\(.*\))?!!?:\s.{1,50})"
