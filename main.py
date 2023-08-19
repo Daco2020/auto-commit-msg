@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import subprocess
-import sys
 import os
 
 from config import PREPARE_COMMIT_MSG

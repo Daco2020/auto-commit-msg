@@ -68,13 +68,3 @@ CONTENTS = {
         "answer_language": "日本語でお答えください。\n",
     },
 }
-DEFAULT_CONTENT = {
-    "code_diff": "Below is the modified code:\n",
-    "instruction_request": "You are an expert in writing commit messages. Please review the modified code I'm providing, and answer with just the commit message title",
-    "summarize_request": "Please summarize the following text in 3 lines:\n",
-    "commit_msg_request": "Please write a commit message title based on the following summary:\n",
-    "convention_request": f"following the format {COMMIT_CONVENTION}"
-    if COMMIT_CONVENTION
-    else "",
-    "answer_language": "Please answer in English.\n",
-}
