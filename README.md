@@ -1,5 +1,7 @@
 # auto-commit-msg
 
+![](https://i.imgur.com/IedULvJ.gif)
+Automatically generate a commit message with just the `git commit` command, without `-m`. No more time wasted on crafting commit messages.
 ## Automate Your Commit Messages Like Never Before!
 
 `auto-commit-msg` is a powerful pre-commit hook that auto-generates commit messages using OpenAI's API. Elevate your Git workflow by ensuring consistent and intelligent commit logs in multiple languages. Experience a seamless and efficient development process while bearing a minimal cost for API usage.
@@ -47,3 +49,4 @@ COMMIT_CONVENTION="접두어로 feat, fix, docs, style, refactor, perf, test, ci
 ## License
 
 MIT
+
