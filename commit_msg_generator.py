@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Dict, List
 import openai
 
 from config import (
@@ -24,7 +24,7 @@ class CommitMessageGenerator:
         messages = self._build_messages(diff)
         return self._get_response_from_openai(messages)
 
-    def _build_messages(self, diff: str) -> list[dict[str, str]]:
+    def _build_messages(self, diff: str) -> List[Dict[str, Any]]:
         """Builds a list of messages to send to the OpenAI API."""
         messages = [{"role": "system", "content": self.content["instruction_request"]}]
 
@@ -57,7 +57,7 @@ class CommitMessageGenerator:
         ]
         return " ".join(summaries)
 
-    def _get_response_from_openai(self, messages: list[dict[str, Any]]) -> str:
+    def _get_response_from_openai(self, messages: List[Dict[str, Any]]) -> str:
         """Fetches response from OpenAI API."""
         response = openai.ChatCompletion.create(
             model=self.model,
